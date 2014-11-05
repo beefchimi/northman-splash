@@ -1,37 +1,21 @@
-document.addEventListener('DOMContentLoaded', function() {
+// document.addEventListener('DOMContentLoaded', function() {
+jQuery(document).ready(function($) {
 
 
 	// Global Variables
 	// ----------------------------------------------------------------------------
+	var $html     = $('html'),
+		$body     = $('body'),
+		$document = $(document),
+		$window   = $(window);
 
-	// --- Objects and Initial Setup --- \\
-
-	// common objects
-	var elBody       = document.body;
-
-
-	// onPageLoad: Main Function To Fire on Window Load
-	// ----------------------------------------------------------------------------
-/*
-	function onPageLoad() {
-	}
-*/
 
 	// Initialize Primary Functions
 	// ----------------------------------------------------------------------------
-
-
-	// onPageLoad();
-
-
-/*
-	// smoothScroll();
-	smoothScroll.init({
-		speed: 400,
-		easing: 'easeInOutQuint',
-		updateURL: false
+	$('mc-embedded-subscribe-form').ajaxChimp({
+		url: 'http://northman.us9.list-manage.com/subscribe/post?u=83bb440596cc17fe903cfdb39&amp;id=b02e7c813a' // 'http://northman.us9.list-manage.com/subscribe/post-json?u=83bb440596cc17fe903cfdb39&amp;id=b02e7c813a&c=?'
 	});
-*/
 
 
-}, false);
+});
+// }, false);

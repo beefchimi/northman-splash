@@ -6,17 +6,24 @@
 
 	// Foundation
 	// ----------------------------------------------------------------------------
+/*
 	body {
 		background-image: url('../img/bg.jpg');
 		background-repeat: no-repeat;
 		background-position: center center;
+		background-attachment: fixed;
 		background-size: cover;
 	}
+*/
 
 	// General Styles
 	// ----------------------------------------------------------------------------
 	main {
 		padding-bottom: 6rem;
+	}
+	div.background {
+		bottom: 0;
+		height: auto;
 	}
 
 	// Header Styles
@@ -48,7 +55,7 @@
 	}
 	// --- Sign-Up Form --- \\
 	// + input: text + \\
-	input.email_text {
+	input[type="email"] {
 		padding: 0 2.8rem;
 		width: 48rem;
 		height: 6.8rem;

@@ -19,6 +19,7 @@ textarea {
 	font-family: 'Open Sans', sans-serif;
 }
 body {
+	position: relative;
 	background-color: hsla(16,100%,54%,1);
 }
 ::selection {
@@ -62,15 +63,23 @@ div.overlay {
 	min-height: 100%;
 }
 */
+div.background {
+	position: fixed;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 35rem;
+	background-image: url('../img/bg.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
 
 // Header Styles
 // ----------------------------------------------------------------------------
 header {
 	padding: 4.8rem 2rem;
-	background-image: url('../img/bg.jpg');
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
 }
 svg.svg_nm-wordmark {
 	margin: 0 auto 4.8rem auto;
@@ -109,7 +118,7 @@ form {
 div.wrap_input-text {
 	position: relative;
 }
-input.email_text {
+input[type="email"] {
 	padding: 0 1rem;
 	width: calc(100% - 6rem);
 	height: 4rem;
@@ -128,13 +137,13 @@ svg.svg_email {
 	height: 0.9rem;
 	fill: hsla(0,0%,86%,1);
 }
-input.email_text:hover,
-input.email_text:focus {
+input[type="email"]:hover,
+input[type="email"]:focus {
 	color: hsla(0,0%,96%,1);
 	border-color: hsla(0,0%,96%,1);
 }
-input.email_text:focus + svg.svg_email,
-input.email_text:valid + svg.svg_email {
+input[type="email"]:focus + svg.svg_email,
+input[type="email"]:valid + svg.svg_email {
 	fill: hsla(0,0%,86%,0);
 }
 // + input: submit + \\
@@ -145,7 +154,7 @@ div.wrap_input-submit {
 	width: 4.6rem;
 	height: 4.6rem;
 }
-input.email_submit {
+input[type="submit"] {
 	width: 100%;
 	height: 100%;
 	font-size: 1.4rem;
@@ -165,9 +174,9 @@ svg.svg_send {
 	height: 1rem;
 	fill: hsla(16,100%,54%,1);
 }
-input.email_submit:hover {
+input[type="submit"]:hover {
 	background-color: hsla(0,0%,94%,1);
 }
-input.email_submit:active {
+input[type="submit"]:active {
 	background-color: hsla(0,0%,84%,1);
 }

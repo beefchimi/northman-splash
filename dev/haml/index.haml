@@ -21,20 +21,34 @@
 				%svg.svg_nm-tagline
 					%use{"xlink:href" => "#nm-tagline"}
 
-			%article
+			%article#mc_embed_signup
 
 				%h2 Northman offers extreme sports coverage that until now, has been unheard of. Sign up to be notified when our service is available.
 
-				%form#email_form.email_form{:action => "", :method => "GET", :role => "email"}
+				%form#mc-embedded-subscribe-form.validate{:action => "//northman.us9.list-manage.com/subscribe/post?u=83bb440596cc17fe903cfdb39&amp;id=b02e7c813a", :method => "post", :name => "mc-embedded-subscribe-form", :novalidate => true}
 
-					.wrap_input-text
-						%input#email_text.email_text{:type => "text", :name => "email", :value => "", :autocomplete => "off", :placeholder => "Enter your email address", :required => true}
+					.wrap_input-text.mc-field-group
+						%label.visuallyhidden{:for => "mce-EMAIL"} Email Address
+						%input#mce-EMAIL.required.email{:type => "email", :name => "EMAIL", :value => "", :autocomplete => "off", :placeholder => "Enter your email address", :required => true}
 						%svg.svg_email
 							%use{"xlink:href" => "#txt-email"}
 
+					-# Mailchimp: unsure of purpose
+					#mce-responses.clear.visuallyhidden
+						#mce-error-response.response{:style => "display:none"}
+						#mce-success-response.response{:style => "display:none"}
+
+					-# Mailchimp: unsure of purpose
+					-# {:style => "position: absolute; left: -5000px;"}
+					#do-not-remove.visuallyhidden
+						%input{:type => "text", :name => "b_83bb440596cc17fe903cfdb39_b02e7c813a", :tabindex => "-1", :value => ""}
+
 					.wrap_input-submit
-						%input#email_submit.email_submit{:type => "submit", :value => "Send"}
+						%input#mc-embedded-subscribe.button{:type => "submit", :value => "Send", :name => "subscribe"}
 						%svg.svg_send
 							%use{"xlink:href" => "#txt-send"}
 
-		%script{:src => "assets/js/scripts.js"}
+		.background
+
+		-# %script{:src => "assets/js/jquery-2.1.1.min.js"}
+		-# %script{:src => "assets/js/scripts.js"}

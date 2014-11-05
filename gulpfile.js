@@ -101,7 +101,7 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
 
 	return gulp.src(paths.scripts.src)
-		.pipe(plugins.concat('scripts.js'))
+		.pipe(plugins.concat(paths.scripts.src)) // 'scripts.js'
 		.pipe(isProduction ? plugins.uglify() : gutil.noop()) // don't uglify if --dev
 		.pipe(gulp.dest(paths.scripts.dest));
 
@@ -148,7 +148,7 @@ gulp.task('svg', function() {
 		return file.contents.toString('utf8');
 	}
 
-	return gulp.src(paths.haml.dest + 'index.html')
+	return gulp.src([paths.haml.dest + 'index.html', paths.haml.dest + 'success.html', paths.haml.dest + '404.html'])
 				.pipe(plugins.inject(svgOutput, { transform: fileContents }))
 				.pipe(gulp.dest(paths.haml.dest));
 
