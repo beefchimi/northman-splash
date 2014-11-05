@@ -1,15 +1,101 @@
 // ==|== media queries ========================================================
-// WIDTHS: 568px / 768px / 980px
+// WIDTHS: 768px / 960px
 // ============================================================================
 
 @media only screen and (min-width: 48em) { // 768px / 16px = 48em
 
+	// Foundation
+	// ----------------------------------------------------------------------------
+	body {
+		background-image: url('../img/bg.jpg');
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+	}
 
+	// General Styles
+	// ----------------------------------------------------------------------------
+	main {
+		padding-bottom: 6rem;
+	}
+
+	// Header Styles
+	// ----------------------------------------------------------------------------
+	header {
+		position: relative;
+		padding: 4.8rem 5.4rem 10rem 5.4rem;
+		background-image: none;
+	}
+	svg.svg_nm-wordmark {
+		margin: 0 0 8rem 0;
+		width: 22rem;
+		height: 6rem;
+	}
+	svg.svg_nm-tagline {
+		width: 66rem;
+		height: 26.7rem;
+	}
+
+	// Article Styles
+	// ----------------------------------------------------------------------------
+	article {
+		padding: 4rem;
+		width: 69rem;
+	}
+	article h2 {
+		margin-bottom: 4rem;
+		font-size: 1.8rem;
+	}
+	// --- Sign-Up Form --- \\
+	// + input: text + \\
+	input.email_text {
+		padding: 0 2.8rem;
+		width: 48rem;
+		height: 6.8rem;
+		font-size: 2.4rem;
+	}
+	svg.svg_email {
+		top: 2.5rem;
+		left: 2.8rem;
+		width: 40.6rem;
+		height: 1.9rem;
+	}
+	// + input: submit + \\
+	div.wrap_input-submit {
+		top: -1.5rem;
+		right: 0;
+		width: 9.8rem;
+		height: 9.8rem;
+	}
+	svg.svg_send {
+		margin: -0.8rem 0 0 -3rem;
+		width: 6rem;
+		height: 1.7rem;
+	}
 
 }
 
+@media only screen and (min-width: 60em) { // 960px / 16px = 60em
+
+	// General Styles
+	// ----------------------------------------------------------------------------
+	main {
+		padding-bottom: 10rem;
+	}
+
+	// Header Styles
+	// ----------------------------------------------------------------------------
+	svg.svg_nm-wordmark {
+		margin-bottom: 10rem;
+	}
+	svg.svg_nm-tagline {
+		width: 92.8rem;
+		height: 37.6rem;
+	}
+
+}
+
+/*
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { // IE10 & IE11
-
-
-
 }
+*/
