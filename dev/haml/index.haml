@@ -10,31 +10,32 @@
 
 		%main{:role => "main"}
 
-			.wrap_logo.wrap_svg
-				%svg.svg_nm-wordmark
-					%use{"xlink:href" => "#nm-wordmark"}
+			%header
 
-			%h1.visuallyhidden Insurance For The Wild.
+				.wrap_logo.wrap_svg
+					%svg.svg_nm-wordmark
+						%use{"xlink:href" => "#nm-wordmark"}
 
-			.wrap_tagline.wrap_svg
-				%svg.svg_nm-tagline
-					%use{"xlink:href" => "#nm-tagline"}
+				%h1.visuallyhidden Insurance For The Wild.
+
+				.wrap_tagline.wrap_svg
+					%svg.svg_nm-tagline
+						%use{"xlink:href" => "#nm-tagline"}
 
 			%article
 
 				%h2 Northman offers extreme sports coverage that until now, has been unheard of. Sign up to be notified when our service is available.
 
 				%form#email_form.email_form{:action => "", :method => "GET", :role => "email"}
-					%input#email_text.email_text{:type => "text", :name => "email", :value => "", :autocomplete => "off", :placeholder => "Enter your email address", :required => true}
 
-					-# .wrap_email.wrap_svg
-						-# %svg.svg_email
-							-# %use{"xlink:href" => "#txt-email"}
+					.wrap_input-text
+						%input#email_text.email_text{:type => "text", :name => "email", :value => "", :autocomplete => "off", :placeholder => "Enter your email address", :required => true}
+						%svg.svg_email
+							%use{"xlink:href" => "#txt-email"}
 
-					%input#email_submit.email_submit{:type => "submit", :value => "Send"}
-
-					-# .wrap_send.wrap_svg
-						-# %svg.svg_send
-							-# %use{"xlink:href" => "#txt-send"}
+					.wrap_input-submit
+						%input#email_submit.email_submit{:type => "submit", :value => "Send"}
+						%svg.svg_send
+							%use{"xlink:href" => "#txt-send"}
 
 		%script{:src => "assets/js/scripts.js"}
