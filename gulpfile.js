@@ -100,8 +100,8 @@ gulp.task('styles', function() {
 // Concat and Output Scripts
 gulp.task('scripts', function() {
 
-	return gulp.src(paths.scripts.src)
-		.pipe(plugins.concat(paths.scripts.src)) // 'scripts.js'
+	return gulp.src(paths.scripts.src) // paths.scripts.src
+		.pipe(plugins.concat('scripts.js'))
 		.pipe(isProduction ? plugins.uglify() : gutil.noop()) // don't uglify if --dev
 		.pipe(gulp.dest(paths.scripts.dest));
 

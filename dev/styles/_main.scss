@@ -16,7 +16,8 @@ input,
 optgroup,
 select,
 textarea {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'futura-pt', sans-serif;
+	// font-family: 'futura-pt', Futura, 'Trebuchet MS', Arial, sans-serif;
 }
 body {
 	position: relative;
@@ -103,10 +104,11 @@ article {
 article h2 {
 	margin-bottom: 2.6rem;
 	padding-bottom: 2.6rem;
-	font-size: 1.5rem;
-	font-weight: 600;
+	font-size: 1.3rem;
+	font-weight: 700;
 	line-height: 1.3;
 	text-align: center;
+	text-transform: uppercase;
 	color: hsla(0,0%,90%,1);
 	border-bottom: 0.2rem solid hsla(0,0%,84%,1);
 }
@@ -143,7 +145,8 @@ input[type="email"]:focus {
 	border-color: hsla(0,0%,96%,1);
 }
 input[type="email"]:focus + svg.svg_email,
-input[type="email"]:valid + svg.svg_email {
+input[type="email"]:valid + svg.svg_email,
+article.has-value input[type="email"] + svg.svg_email {
 	fill: hsla(0,0%,86%,0);
 }
 // + input: submit + \\
@@ -175,8 +178,8 @@ svg.svg_send {
 	fill: hsla(16,100%,54%,1);
 }
 input[type="submit"]:hover {
-	background-color: hsla(0,0%,94%,1);
+	background-color: hsla(0,0%,15%,1);
 }
 input[type="submit"]:active {
-	background-color: hsla(0,0%,84%,1);
+	background-color: hsla(0,0%,40%,1);
 }

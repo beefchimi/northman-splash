@@ -4,18 +4,6 @@
 
 @media only screen and (min-width: 48em) { // 768px / 16px = 48em
 
-	// Foundation
-	// ----------------------------------------------------------------------------
-/*
-	body {
-		background-image: url('../img/bg.jpg');
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-attachment: fixed;
-		background-size: cover;
-	}
-*/
-
 	// General Styles
 	// ----------------------------------------------------------------------------
 	main {
@@ -35,8 +23,6 @@
 	}
 	svg.svg_nm-wordmark {
 		margin: 0 0 8rem 0;
-		width: 22rem;
-		height: 6rem;
 	}
 	svg.svg_nm-tagline {
 		width: 66rem;
@@ -47,37 +33,37 @@
 	// ----------------------------------------------------------------------------
 	article {
 		padding: 4rem;
-		width: 69rem;
+		width: 62.2rem;
 	}
 	article h2 {
 		margin-bottom: 4rem;
-		font-size: 1.8rem;
+		// font-size: 1.9rem;
 	}
 	// --- Sign-Up Form --- \\
 	// + input: text + \\
 	input[type="email"] {
 		padding: 0 2.8rem;
-		width: 48rem;
-		height: 6.8rem;
+		width: 42.6rem;
+		height: 6.4rem;
 		font-size: 2.4rem;
 	}
 	svg.svg_email {
-		top: 2.5rem;
+		top: 2.4rem;
 		left: 2.8rem;
-		width: 40.6rem;
-		height: 1.9rem;
+		width: 36.8rem;
+		height: 1.7rem;
 	}
 	// + input: submit + \\
 	div.wrap_input-submit {
 		top: -1.5rem;
 		right: 0;
-		width: 9.8rem;
-		height: 9.8rem;
+		width: 9rem;
+		height: 9rem;
 	}
 	svg.svg_send {
-		margin: -0.8rem 0 0 -3rem;
-		width: 6rem;
-		height: 1.7rem;
+		margin: -0.8rem 0 0 -2.9rem;
+		width: 5.8rem;
+		height: 1.6rem;
 	}
 
 }
@@ -92,12 +78,9 @@
 
 	// Header Styles
 	// ----------------------------------------------------------------------------
-	svg.svg_nm-wordmark {
-		margin-bottom: 10rem;
-	}
 	svg.svg_nm-tagline {
-		width: 92.8rem;
-		height: 37.6rem;
+		width: 83rem;
+		height: 33.6rem;
 	}
 
 }

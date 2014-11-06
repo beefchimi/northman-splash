@@ -29,7 +29,8 @@
 
 					.wrap_input-text.mc-field-group
 						%label.visuallyhidden{:for => "mce-EMAIL"} Email Address
-						%input#mce-EMAIL.required.email{:type => "email", :name => "EMAIL", :value => "", :autocomplete => "off", :placeholder => "Enter your email address", :required => true}
+						-# :placeholder => "Enter your email address",
+						%input#mce-EMAIL.required.email{:type => "email", :name => "EMAIL", :value => "", :autocomplete => "off", :required => true}
 						%svg.svg_email
 							%use{"xlink:href" => "#txt-email"}
 
@@ -51,4 +52,4 @@
 		.background
 
 		-# %script{:src => "assets/js/jquery-2.1.1.min.js"}
-		-# %script{:src => "assets/js/scripts.js"}
+		%script{:src => "assets/js/scripts.js"}
