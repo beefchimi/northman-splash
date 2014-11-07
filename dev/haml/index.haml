@@ -12,8 +12,9 @@
 
 			%header
 
-				%svg.svg_nm-wordmark
-					%use{"xlink:href" => "#nm-wordmark"}
+				%a{:href => "http://northman.co", :title => "Return Home"}
+					%svg.svg_nm-wordmark
+						%use{"xlink:href" => "#nm-wordmark"}
 
 				%h1.visuallyhidden Insurance For The Wild.
 
@@ -23,9 +24,9 @@
 
 			%article#mc_embed_signup
 
-				%h2 Northman offers extreme sports coverage that until now, has been unheard of. Sign up to be notified when our service is available.
+				%h2 For the explorers, the adventurers and the adrenaline junkies. We have you covered. Sign up to be the first to know when we launch.
 
-				%form#mc-embedded-subscribe-form.validate{:action => "//northman.us9.list-manage.com/subscribe/post?u=83bb440596cc17fe903cfdb39&amp;id=b02e7c813a", :method => "post", :name => "mc-embedded-subscribe-form", :novalidate => true}
+				%form#mc-embedded-subscribe-form.validate{:action => "//northman.us9.list-manage.com/subscribe/post-json?u=83bb440596cc17fe903cfdb39&amp;id=b02e7c813a&c=?", :method => "get", :name => "mc-embedded-subscribe-form", :novalidate => true}
 
 					.wrap_input-text.mc-field-group
 						%label.visuallyhidden{:for => "mce-EMAIL"} Email Address
@@ -35,9 +36,9 @@
 							%use{"xlink:href" => "#txt-email"}
 
 					-# Mailchimp: unsure of purpose
-					#mce-responses.clear.visuallyhidden
-						#mce-error-response.response{:style => "display:none"}
-						#mce-success-response.response{:style => "display:none"}
+					-# #mce-responses.clear.visuallyhidden
+						-# #mce-error-response.response{:style => "display:none"}
+						-# #mce-success-response.response{:style => "display:none"}
 
 					-# Mailchimp: unsure of purpose
 					-# {:style => "position: absolute; left: -5000px;"}
@@ -49,7 +50,12 @@
 						%svg.svg_send
 							%use{"xlink:href" => "#txt-send"}
 
+				.mce-response
+					%h3#mce-response-text Almost finished... We need to confirm your email address. To complete the subscription process, please click the link in the email we just sent you.
+
 		.background
 
-		-# %script{:src => "assets/js/jquery-2.1.1.min.js"}
+		%script{:src => "assets/js/jquery-2.1.1.min.js"}
 		%script{:src => "assets/js/scripts.js"}
+
+		-# = Haml::Engine.new(File.read("dev/haml/partials/_js-analytics.haml")).render

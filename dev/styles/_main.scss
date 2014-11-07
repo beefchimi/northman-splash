@@ -16,8 +16,7 @@ input,
 optgroup,
 select,
 textarea {
-	font-family: 'futura-pt', sans-serif;
-	// font-family: 'futura-pt', Futura, 'Trebuchet MS', Arial, sans-serif;
+	font-family: 'futura-pt', Futura, 'Trebuchet MS', Arial, sans-serif;
 }
 body {
 	position: relative;
@@ -46,6 +45,14 @@ a,
 input,
 button {
 	transition: all 0.2s ease-in-out;
+}
+article.success h2,
+article.success form,
+article.success div.mce-response {
+	transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+article.success div.mce-response {
+	transition: opacity 0.4s ease-in-out 0.4s, visibility 0.4s ease-in-out 0.4s;
 }
 
 // General Styles
@@ -82,10 +89,21 @@ div.background {
 header {
 	padding: 4.8rem 2rem;
 }
-svg.svg_nm-wordmark {
+header a {
+	display: block;
 	margin: 0 auto 4.8rem auto;
 	width: 20rem;
 	height: 5.5rem;
+}
+header a svg.svg_nm-wordmark {
+	width: 100%;
+	height: 100%;
+	fill: hsla(16,100%,54%,1);
+}
+header a:hover svg.svg_nm-wordmark {
+	fill: hsla(16,100%,70%,1);
+}
+header a:active svg.svg_nm-wordmark {
 	fill: hsla(16,100%,54%,1);
 }
 svg.svg_nm-tagline {
@@ -97,8 +115,10 @@ svg.svg_nm-tagline {
 // Article Styles
 // ----------------------------------------------------------------------------
 article {
+	position: relative;
 	margin: 0 auto;
 	padding: 3.2rem 2rem;
+	// height: 23rem;
 	background-color: hsla(16,100%,54%,1);
 }
 article h2 {
@@ -182,4 +202,40 @@ input[type="submit"]:hover {
 }
 input[type="submit"]:active {
 	background-color: hsla(0,0%,40%,1);
+}
+// --- AJAX Response --- \\
+div.mce-response {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	vertical-align: middle;
+}
+div.mce-response h3 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 0 3.2rem;
+	width: 100%;
+	font-size: 1.4rem;
+	font-weight: 700;
+	line-height: 1.3;
+	text-align: center;
+	text-transform: uppercase;
+	color: hsla(0,0%,90%,1);
+	vertical-align: middle;
+}
+// + ajax success + \\
+article.success h2,
+article.success form {
+	opacity: 0;
+	visibility: hidden;
+}
+article.success div.mce-response {
+	opacity: 1;
+	visibility: visible;
 }
