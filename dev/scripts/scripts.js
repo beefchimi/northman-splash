@@ -44,22 +44,10 @@ jQuery(document).ready(function($) {
 
 						success: function(data) {
 
-							if (data.result != 'success') {
-
-								// something went wrong, parse data.msg string and display message
-								alert('ERROR: '+ data.msg);
-
-							} else {
-
-								// it worked, so hide form and display thank-you message.
-								// alert("Success: "+ data.msg);
-								$responseText.html(data.msg);
-								$signupArticle.addClass('success');
-								$this[0].reset(); // Reset Form
-
-								// displaySuccess();
-
-							}
+							// it worked, so hide form and display thank-you message.
+							$responseText.html(data.msg);
+							$signupArticle.addClass('success');
+							$this[0].reset();
 
 						}
 
@@ -74,19 +62,6 @@ jQuery(document).ready(function($) {
 		}
 
 	}
-
-
-/*
-	// Dispaly Form Success Message
-	// ----------------------------------------------------------------------------
-	function displaySuccess() {
-
-
-
-
-
-	}
-*/
 
 
 	// Check if email input has a value

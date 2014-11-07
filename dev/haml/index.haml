@@ -35,13 +35,6 @@
 						%svg.svg_email
 							%use{"xlink:href" => "#txt-email"}
 
-					-# Mailchimp: unsure of purpose
-					-# #mce-responses.clear.visuallyhidden
-						-# #mce-error-response.response{:style => "display:none"}
-						-# #mce-success-response.response{:style => "display:none"}
-
-					-# Mailchimp: unsure of purpose
-					-# {:style => "position: absolute; left: -5000px;"}
 					#do-not-remove.visuallyhidden
 						%input{:type => "text", :name => "b_83bb440596cc17fe903cfdb39_b02e7c813a", :tabindex => "-1", :value => ""}
 
@@ -51,11 +44,11 @@
 							%use{"xlink:href" => "#txt-send"}
 
 				.mce-response
-					%h3#mce-response-text Almost finished... We need to confirm your email address. To complete the subscription process, please click the link in the email we just sent you.
+					%h3#mce-response-text
 
 		.background
 
 		%script{:src => "assets/js/jquery-2.1.1.min.js"}
 		%script{:src => "assets/js/scripts.js"}
 
-		-# = Haml::Engine.new(File.read("dev/haml/partials/_js-analytics.haml")).render
+		= Haml::Engine.new(File.read("dev/haml/partials/_js-analytics.haml")).render
